@@ -26,4 +26,10 @@ public sealed partial class MainPage : Page
     {
 
     }
+
+    private void uteuwp(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    {
+            Frame.Navigate(typeof(UTEUWPPage));
+        
+    }
 }

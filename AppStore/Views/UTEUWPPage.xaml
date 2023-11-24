@@ -1,0 +1,39 @@
+<Page
+    x:Class="AppStore.Views.UTEUWPPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppStore.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <Image HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"  Source="/Assets/UTEbig.png" Stretch="None"/>
+            <StackPanel Margin="215,10,0,0">
+                <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="UltraTextEdit UWP" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="48"/>
+                <HyperlinkButton Content="jpb" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Click="hyperlinkclick"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Text="31 May 2022" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            </StackPanel>
+            <StackPanel Margin="10,215,10,0">
+                <Expander
+     IsExpanded="False"
+     ExpandDirection="Down"
+     VerticalAlignment="Top"
+     Header="Screenshots"
+     Content="No screenshots yet!"></Expander>
+                <TextBlock Text="version 1.0.19044.493" FontSize="16" FontWeight="Light" x:Name="versiontext"/>
+                <Button Style="{StaticResource AccentButtonStyle}" Content="Download" Click="download" />
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Right" Margin="0,251,0,0" Text="24.5 MB" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+
+            <!--
+                The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.
+            -->
+        </Grid>
+
+    </Grid>
+</Page>
