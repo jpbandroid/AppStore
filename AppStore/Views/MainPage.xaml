@@ -9,7 +9,7 @@
     <Grid x:Name="ContentArea">
         <Grid
             Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <Button Margin="10,62,0,0" VerticalAlignment="Top" Click="myappuwp">a
+            <Button Margin="10,62,0,0" VerticalAlignment="Top" Click="myappuwp">
                 <StackPanel>
                     <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
                     <TextBlock Text="MyApp UWP" FontWeight="SemiBold" />

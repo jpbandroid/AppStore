@@ -16,4 +16,14 @@ public sealed partial class MainPage : Page
         ViewModel = App.GetService<MainViewModel>();
         InitializeComponent();
     }
+
+    private void myappuwp(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    {
+
+    }
+
+    private void myappuwpltsc(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    {
+
+    }
 }
