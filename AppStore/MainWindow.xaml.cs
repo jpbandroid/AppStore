@@ -1,7 +1,7 @@
 ﻿using AppStore.Helpers;
-
+using Microsoft.UI.Composition.SystemBackdrops;
+using Microsoft.UI.Xaml.Media;
 using Windows.UI.ViewManagement;
-
 namespace AppStore;
 
 public sealed partial class MainWindow : WindowEx
@@ -13,6 +13,11 @@ public sealed partial class MainWindow : WindowEx
     public MainWindow()
     {
         InitializeComponent();
+
+        SystemBackdrop = new MicaBackdrop()
+        {
+            Kind = MicaKind.BaseAlt
+        };
 
         AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/WindowIcon.ico"));
         Content = null;
