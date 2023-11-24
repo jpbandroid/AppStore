@@ -1,0 +1,8 @@
+﻿namespace AppStore.Behaviors;
+
+public enum NavigationViewHeaderMode
+{
+    Always,
+    Never,
+    Minimal
+}
