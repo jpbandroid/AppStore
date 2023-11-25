@@ -26,6 +26,10 @@
      Content="No screenshots yet!"></Expander>
                 <TextBlock Text="version 1.0.19044.493" FontSize="16" FontWeight="Light" x:Name="versiontext"/>
                 <Button Style="{StaticResource AccentButtonStyle}" Content="Download" Click="download" />
+                <TextBlock Text="text download path" FontSize="16" FontWeight="Light" x:Name="tdowntext"/>
+                <TextBlock Text="msix download path" FontSize="16" FontWeight="Light" x:Name="mdowntext"/>
+                <TextBlock Text="msix storage path" FontSize="16" FontWeight="Light" x:Name="mstortext"/>
+                <TextBlock Text="text storage path" FontSize="16" FontWeight="Light" x:Name="tstortext"/>
             </StackPanel>
             <TextBlock HorizontalAlignment="Right" Margin="0,251,0,0" Text="24.5 MB" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
 
