@@ -25,37 +25,37 @@ public sealed partial class AppListingControl : UserControl
         this.InitializeComponent();
     }
 
-    public static readonly DependencyProperty TitleProperty =
+    public static readonly DependencyProperty AppTitleProperty =
         DependencyProperty.Register(
-        "Title", // The name of the property
+        "AppTitle", // The name of the property
         typeof(string), // The type of the property
         typeof(AppListingControl), // The type of the owner class
-        new PropertyMetadata("Title") // Default value
+        new PropertyMetadata("AppTitle", AppTitleChanged) // Default value
         );
 
     [Browsable(true)]
     [Category("Common")]
     [Description("The title of the app listing")]
-    public string Title
+    public string AppTitle
     {
         get
         {
-            return (string)GetValue(TitleProperty);
+            return (string)GetValue(AppTitleProperty);
         }
         set
         {
-            SetValue(TitleProperty, value);
+            SetValue(AppTitleProperty, value);
         }
     }
 
-        private static void TitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void AppTitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ((AppListingControl)d).DetectTitleChange();
         }
 
     public void DetectTitleChange()
     {
-        TitleBlock.Text = Title;
+        TitleBlock.Text = AppTitle;
     }
 
 }
