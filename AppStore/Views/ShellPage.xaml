@@ -10,22 +10,44 @@
     Loaded="OnLoaded">
 
     <Grid>
-        <Grid x:Name="AppTitleBar"
-              Canvas.ZIndex="1"
-              Height="{Binding ElementName=NavigationViewControl, Path=CompactPaneLength}"
-              IsHitTestVisible="True"
-              VerticalAlignment="Top">
-            <Image Source="/Assets/WindowIcon.ico"
-                   HorizontalAlignment="Left"
-                   Width="24"
-                   Height="24" />
-            <TextBlock x:Name="AppTitleBarText"
-                       VerticalAlignment="Center"
-                       TextWrapping="NoWrap"
-                       Style="{StaticResource CaptionTextBlockStyle}"
-                       Margin="32,0,0,0"/>
-        </Grid>
-        <NavigationView
+        <Border x:Name="AppTitleBar"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Height="48">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="AppFontIcon"
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"
+                    Source="/Assets/WindowIcon.ico" 
+                    Width="16" 
+                    Height="16"/>
+                <TextBlock x:Name="AppTitle"
+                    Text="AppStore"
+                    VerticalAlignment="Center"
+                    Margin="12,0,0,0"
+                    Style="{StaticResource CaptionTextBlockStyle}" />
+                <TextBlock x:Name="PreviewBlock"
+                               Text="PREVIEW"
+                               VerticalAlignment="Center"
+                               Margin="12,2,0,0"
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                            RequestedTheme="Light" Opacity="0.5"
+                           Visibility="Visible"/>
+            </StackPanel>
+        </Border>
+        <AutoSuggestBox QueryIcon="Find"
+                                x:Name="searchBox"
+                                AllowFocusOnInteraction="True"
+                    PlaceholderText="Search apps, games, and more"
+                    HorizontalAlignment="Center"
+                        Padding="10,0,0,0"
+                        VerticalAlignment="Top"
+                    Width="260" Height="32"
+                        Canvas.ZIndex="2"
+                        TextChanged="AutoSuggestBox_TextChanged"
+                SuggestionChosen="AutoSuggestBox_SuggestionChosen" Margin="0,10,0,0"
+/>
+    <NavigationView
             x:Name="NavigationViewControl"
             Canvas.ZIndex="0"
             IsBackButtonVisible="Visible"
