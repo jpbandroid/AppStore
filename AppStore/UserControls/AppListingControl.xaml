@@ -13,7 +13,7 @@
             <Border Background="{ThemeResource ControlStrokeColorDefaultBrush}" BorderBrush="{ThemeResource ControlStrokeColorSecondaryBrush}" Width="50" Height="50" Padding="0,0,0,0" Margin="15, 15, 0, 0" CornerRadius="2, 2, 2, 2" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Image Source="/Assets/StoreLogo.png" Width="50" Height="50"/>
             </Border>
-            <TextBlock Text="{Binding Title, RelativeSource={Binding DataContext}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="75, 15, 50, 0" Height="15"/>
+            <TextBlock Foreground="{ThemeResource DefaultTextForegroundThemeBrush}" Text="{Binding Title, RelativeSource={Binding DataContext}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="75, 15, 50, 0" Height="15"/>
         </Grid>
     </Border>
 </UserControl>
