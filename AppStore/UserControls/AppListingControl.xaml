@@ -14,6 +14,7 @@
                 <Image Source="/Assets/StoreLogo.png" Width="50" Height="50"/>
             </Border>
             <TextBlock x:Name="TitleBlock" Text="{Binding AppTitle, RelativeSource={Binding DataContext}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="75, 15, 50, 0"/>
+            <TextBlock x:Name="DescriptionBlock" Text="{Binding AppDescription, RelativeSource={Binding DataContext}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="75, 30, 15, 0" FontSize="10"/>
         </Grid>
     </Border>
 </UserControl>
