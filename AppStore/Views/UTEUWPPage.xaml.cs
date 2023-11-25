@@ -41,9 +41,6 @@ public sealed partial class UTEUWPPage : Page
         var filename = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/UTE-dev-version.txt";
         StreamReader sr = new StreamReader(filename);
         versiontext.Text = "version " + sr.ReadToEnd();
-        tdowntext.Text = sourcetext.ToString();
-        tstortext.Text = filename.ToString();
-        mstortext.Text = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
     }
 
     private void hyperlinkclick(object sender, RoutedEventArgs e)
