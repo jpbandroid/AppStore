@@ -58,4 +58,36 @@ public sealed partial class AppListingControl : UserControl
         TitleBlock.Text = AppTitle;
     }
 
+    public static readonly DependencyProperty AppDescriptionProperty =
+        DependencyProperty.Register(
+        "AppDescription", // The name of the property
+        typeof(string), // The type of the property
+        typeof(AppListingControl), // The type of the owner class
+        new PropertyMetadata("AppDescription", AppDescriptionChanged) // Default value
+        );
+
+    [Browsable(true)]
+    [Category("Common")]
+    [Description("The description of the app listing")]
+    public string AppDescription
+    {
+        get
+        {
+            return (string)GetValue(AppDescriptionProperty);
+        }
+        set
+        {
+            SetValue(AppDescriptionProperty, value);
+        }
+    }
+
+    private static void AppDescriptionChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        ((AppListingControl)d).DetectDescriptionChange();
+    }
+
+    public void DetectDescriptionChange()
+    {
+       DescriptionBlock.Text = AppDescription;
+    }
 }
