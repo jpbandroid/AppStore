@@ -27,7 +27,7 @@
                         <TextBlock Text="MyApp UWP LTSC" FontWeight="SemiBold" />
                     </StackPanel>
                 </Button>
-                <Button Margin="262,62,0,0" VerticalAlignment="Top" Click="uteuwp">
+                <Button Margin="282,62,0,0" VerticalAlignment="Top" Click="uteuwp">
                     <StackPanel>
                         <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
                         <TextBlock Text="UltraTextEdit UWP" FontWeight="SemiBold" />
