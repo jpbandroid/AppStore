@@ -14,6 +14,15 @@ namespace AppStore.Views;
 // TODO: Update NavigationViewItem titles and icons in ShellPage.xaml.
 public sealed partial class ShellPage : Page
 {
+
+    private readonly List<string> Apps = new List<string>()
+        {
+            "MyApp",
+            "MyApp UWP",
+            "MyApp UWP LTSC",
+            "UltraTextEdit UWP"
+        };
+
     public ShellViewModel ViewModel
     {
         get;
@@ -84,11 +93,49 @@ public sealed partial class ShellPage : Page
 
     private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
     {
-
+        // Since selecting an item will also change the text,
+        // only listen to changes caused by user entering text.
+        if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+        {
+            var suitableItems = new List<string>();
+            var splitText = sender.Text.ToLower().Split(" ");
+            foreach (var app in Apps)
+            {
+                var found = splitText.All((key) =>
+                {
+                    return app.ToLower().Contains(key);
+                });
+                if (found)
+                {
+                    suitableItems.Add(app);
+                }
+            }
+            if (suitableItems.Count == 0)
+            {
+                suitableItems.Add("No results found");
+            }
+            sender.ItemsSource = suitableItems;
+        }
     }
 
     private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
     {
-
+        var chosen = args.SelectedItem as string;
+        if (chosen != null)
+        {
+            if (chosen == "MyApp UWP")
+            {
+            }
+            else if (chosen == "MyApp UWP LTSC")
+            {
+            }
+            else if (chosen == "MyApp")
+            {
+            }
+            else if (chosen == "UltraTextEdit UWP")
+            {
+                Frame.Navigate(typeof(UTEUWPPage));
+            }
+        }
     }
 }
