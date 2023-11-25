@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Border CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Width="250" Height="225" BorderBrush="{TemplateBinding ControlElevationBorderBrush}">
+    <Border CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Width="250" Height="225" BorderBrush="{ThemeResource ControlElevationBorderBrush}">
         <StackPanel Orientation="Horizontal" Padding="5, 5, 5, 5">
             <Image Source="/Assets/myappuwpSMALL.png"/>
             <TextBlock Text="e"/>

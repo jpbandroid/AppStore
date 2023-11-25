@@ -60,6 +60,7 @@
 
                 <StackPanel Margin="{StaticResource XSmallTopMargin}">
                     <TextBlock Text="{x:Bind ViewModel.VersionDescription, Mode=OneWay}" Style="{ThemeResource BodyTextBlockStyle}" />
+                    <TextBlock Text="©️ 2023 jpbandroid, Ivivius"/>
 
                     <TextBlock
                     x:Uid="Settings_AboutDescription"
