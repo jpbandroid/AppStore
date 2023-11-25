@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:AppStore.UserControls"
     mc:Ignorable="d"
     Background="{ThemeResource LayerOnMicaBaseAltFillColorTransparent}">
     <Grid>
@@ -32,6 +33,7 @@
                         <TextBlock Text="UltraTextEdit UWP" FontWeight="SemiBold" />
                     </StackPanel>
                 </Button>
+                <local:AppListingControl Margin="300,62,0,0"/>
 
                 <!--
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 

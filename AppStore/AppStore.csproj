@@ -22,6 +22,7 @@
     <Content Remove="Assets\UTEbig.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="UserControls\AppListingControl.xaml" />
     <None Remove="Views\UTEUWPPage.xaml" />
   </ItemGroup>
 
@@ -45,6 +46,9 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Page Update="UserControls\AppListingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\UTEUWPPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
