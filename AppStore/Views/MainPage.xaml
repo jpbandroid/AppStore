@@ -33,7 +33,7 @@
                         <TextBlock Text="UltraTextEdit UWP" FontWeight="SemiBold" />
                     </StackPanel>
                 </Button>
-                <local:AppListingControl Margin="300,62,0,0"/>
+                <local:AppListingControl Margin="300,62,0,0" Title="this is the title"/>
 
                 <!--
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
