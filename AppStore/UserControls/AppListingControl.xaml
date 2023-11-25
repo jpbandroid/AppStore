@@ -10,7 +10,7 @@
 
     <Border CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Width="250" Height="225" BorderBrush="{ThemeResource ControlElevationBorderBrush}">
         <StackPanel Orientation="Horizontal" Padding="5, 5, 5, 5">
-            <Border Background={TemplateBinding CardBackgroundFillColorSecondaryBrush} BorderBrush={TemplateBinding ControlStrokeColorDefaultBrush} Width="50" Height="50" Padding="0,0,0,0" Margin="10, 10, 0, 0" CornerRadius="2, 2, 2, 2">
+            <Border Background="{TemplateBinding CardBackgroundFillColorSecondaryBrush}" BorderBrush="{TemplateBinding ControlStrokeColorDefaultBrush}" Width="50" Height="50" Padding="0,0,0,0" Margin="10, 10, 0, 0" CornerRadius="2, 2, 2, 2">
                 <Image Source="/Assets/myappuwpSMALL.png" Width="50" Height="50"/>
             </Border>
             <TextBlock Text="e"/>
