@@ -47,4 +47,15 @@ public sealed partial class AppListingControl : UserControl
             SetValue(TitleProperty, value);
         }
     }
+
+        private static void TitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((AppListingControl)d).DetectTitleChange();
+        }
+
+    public void DetectTitleChange()
+    {
+        TitleBlock.Text = Title;
+    }
+
 }
