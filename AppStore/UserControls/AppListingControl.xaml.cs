@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,5 +23,28 @@ public sealed partial class AppListingControl : UserControl
     public AppListingControl()
     {
         this.InitializeComponent();
+    }
+
+    public static readonly DependencyProperty TitleProperty =
+        DependencyProperty.Register(
+        "Title", // The name of the property
+        typeof(string), // The type of the property
+        typeof(AppListingControl), // The type of the owner class
+        new PropertyMetadata("Title") // Default value
+        );
+
+    [Browsable(true)]
+    [Category("Common")]
+    [Description("The title of the MessageBox")]
+    public string Title
+    {
+        get
+        {
+            return (string)GetValue(TitleProperty);
+        }
+        set
+        {
+            SetValue(TitleProperty, value);
+        }
     }
 }
