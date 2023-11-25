@@ -35,7 +35,7 @@ public sealed partial class AppListingControl : UserControl
 
     [Browsable(true)]
     [Category("Common")]
-    [Description("The title of the MessageBox")]
+    [Description("The title of the app listing")]
     public string Title
     {
         get
