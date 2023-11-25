@@ -8,10 +8,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Border CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Width="250" Height="225" BorderBrush="{ThemeResource ControlElevationBorderBrush}">
+    <Border CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Width="250" Height="225" BorderBrush="{ThemeResource ControlElevationBorderBrush}" Padding="0">
+        <Grid>
             <Border Background="{ThemeResource ControlStrokeColorDefaultBrush}" BorderBrush="{ThemeResource ControlStrokeColorSecondaryBrush}" Width="50" Height="50" Padding="0,0,0,0" Margin="15, 15, 0, 0" CornerRadius="2, 2, 2, 2" BorderThickness="1, 1, 1, 1" Horizontal alignment="Left" VerticalAlignment="Top">
                 <Image Source="/Assets/StoreLogo.png" Width="50" Height="50"/>
             </Border>
             <TextBlock Text="{Binding Title, RelativeSource={Binding DataContext}}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75, 15, 50, 0"/>
+        </Grid>
     </Border>
 </UserControl>
