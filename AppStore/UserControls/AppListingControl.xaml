@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Border CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Width="250" Height="225" BorderBrush="{ThemeResource ControlElevationBorderBrush}">
-        <StackPanel Orientation="Horizontal" Padding="5, 5, 5, 5">
+        <StackPanel Orientation="Horizontal" Padding="5, 5, 5, 5" VerticalAlignment="Top">
             <Border Background="{ThemeResource ControlStrokeColorDefaultBrush}" BorderBrush="{ThemeResource ControlStrokeColorSecondaryBrush}" Width="50" Height="50" Padding="0,0,0,0" Margin="10, 10, 0, 0" CornerRadius="2, 2, 2, 2" BorderThickness="1, 1, 1, 1">
                 <Image Source="/Assets/StoreLogo.png" Width="50" Height="50"/>
             </Border>
