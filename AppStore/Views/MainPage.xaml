@@ -21,13 +21,13 @@
                     </StackPanel>
                 </Button>
                 <TextBlock Style="{ThemeResource TitleTextBlockStyle}" HorizontalAlignment="Left" Margin="10,10,0,0" Text="New Apps" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                <Button Margin="136,62,0,0" VerticalAlignment="Top" Click="myappuwpltsc">
+                <Button Margin="126,62,0,0" VerticalAlignment="Top" Click="myappuwpltsc">
                     <StackPanel>
                         <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
                         <TextBlock Text="MyApp UWP LTSC" FontWeight="SemiBold" />
                     </StackPanel>
                 </Button>
-                <Button Margin="282,62,0,0" VerticalAlignment="Top" Click="uteuwp">
+                <Button Margin="272,62,0,0" VerticalAlignment="Top" Click="uteuwp">
                     <StackPanel>
                         <Image Source="/Assets/myappuwpSMALL.png" Stretch="None" />
                         <TextBlock Text="UltraTextEdit UWP" FontWeight="SemiBold" />
