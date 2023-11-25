@@ -134,7 +134,7 @@ public sealed partial class ShellPage : Page
             }
             else if (chosen == "UltraTextEdit UWP")
             {
-                Frame.Navigate(typeof(UTEUWPPage));
+                NavigationFrame.Navigate(typeof(UTEUWPPage));
             }
         }
     }
