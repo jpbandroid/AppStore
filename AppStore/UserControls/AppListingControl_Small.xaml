@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="AppStore.UserControls.AppListingControl_Small"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppStore.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Border CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Width="250" Height="80" BorderBrush="{ThemeResource ControlElevationBorderBrush}" Padding="0">
+        <Grid>
+            <Border Background="{ThemeResource ControlStrokeColorDefaultBrush}" BorderBrush="{ThemeResource ControlStrokeColorSecondaryBrush}" Width="50" Height="50" Padding="0,0,0,0" Margin="15, 15, 0, 0" CornerRadius="2, 2, 2, 2" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image Source="/Assets/StoreLogo.png" Width="50" Height="50"/>
+            </Border>
+            <TextBlock x:Name="TitleBlock" Text="{Binding AppTitle, RelativeSource={Binding DataContext}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="75, 15, 50, 0" FontSize="14"/>
+            <TextBlock x:Name="DescriptionBlock" Text="{Binding AppDescription, RelativeSource={Binding DataContext}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="75, 35, 50, 0" FontSize="11" Opacity="0.9"/>
+        </Grid>
+    </Border>
+</UserControl>
